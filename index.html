@@ -869,34 +869,21 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
   <div class="video-grid">
     <div class="video-card">
       <div class="video-embed" id="videoEmbed1">
-        <div class="video-placeholder" id="placeholder1">
-          <div class="play-btn">▶</div>
-          <div class="vid-label">Montessori Maths in Action</div>
-          <p>Paste a YouTube URL below</p>
-        </div>
+        <iframe src="https://www.youtube.com/embed/NlnHVxJKEiM?start=6" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
       <div class="video-meta">
         <h4 contenteditable="true">Montessori Sensorial exercises</h4>
-        <p contenteditable="true">This video demonstrates how the Montessori Sensorial Exercises help children develop their ability to pay close attention, classify what they see, and focus. We believe that young scientists are born in the Sensorial area of a well-run Montessori school.
-</p>
-        <input class="video-url-input" id="ytUrl1" placeholder="https://www.youtube.com/watch?v=NlnHVxJKEiM&t=6s" />
-        <button class="load-video-btn" onclick="loadYoutube(1)">▶ Load Video</button>
+        <p contenteditable="true">This video demonstrates how the Montessori Sensorial Exercises help children develop their ability to pay close attention, classify what they see, and focus. We believe that young scientists are born in the Sensorial area of a well-run Montessori school.</p>
       </div>
     </div>
 
     <div class="video-card">
       <div class="video-embed" id="videoEmbed2">
-        <div class="video-placeholder" id="placeholder2">
-          <div class="play-btn">▶</div>
-          <div class="vid-label">Montessori Practical Life</div>
-          <p>Paste a YouTube URL below</p>
-        </div>
+        <iframe src="https://www.youtube.com/embed/wKSRCeyR5Ck?start=20" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
       <div class="video-meta">
         <h4 contenteditable="true">Practical Life & Mathematical Thinking</h4>
         <p contenteditable="true">Montessori children easily grasp these and other advanced math concepts, whereas many regularly taught second and third graders find it difficult to add three or four-digit numbers. Watch this video to learn the clever series of exercises that help 6-year-olds do math operations into the thousands and set them up to become proficient in long multiplication into the millions by early elementary school.</p>
-        <input class="video-url-input" id="ytUrl2" placeholder="Paste YouTube URL here e.g. https://www.youtube.com/watch?v=..." />
-        <button class="load-video-btn" onclick="loadYoutube(2)">▶ Load Video</button>
       </div>
     </div>
   </div>
@@ -913,63 +900,27 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 
   <div class="photos-grid">
     <div class="photo-card pc-1" id="pc1">
-      <div class="photo-placeholder" id="pp1">
-        <span style="font-size:2.5rem">🔢</span>
-        <span>Number Rods</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,1)"></label>
-      </div>
+      <img src="./images/numberRods.jpeg" class="photo-img-real" id="pp1" />
       <div class="photo-caption"><input value="Number rods — one-to-one correspondence activity" /></div>
     </div>
     <div class="photo-card pc-2" id="pc2">
-      <div class="photo-placeholder" id="pp2">
-        <span style="font-size:2.5rem">✋</span>
-        <span>Sandpaper Numbers</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,2)"></label>
-      </div>
+      <img src="./images/SandpaperNumber.jpeg" class="photo-img-real" id="pp2" />
       <div class="photo-caption"><input value="Sandpaper numerals — tactile number recognition" /></div>
     </div>
     <div class="photo-card pc-3" id="pc3">
-      <div class="photo-placeholder" id="pp3">
-        <span style="font-size:2.5rem">🫙</span>
-        <span>Practical Life</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,3)"></label>
-      </div>
+      <img src="./images/PouringActivity.jpg" class="photo-img-real" id="pp3" />
       <div class="photo-caption"><input value="Pouring activity — volume and estimation" /></div>
     </div>
     <div class="photo-card pc-4" id="pc4">
-      <div class="photo-placeholder" id="pp4">
-        <span style="font-size:2.5rem">👫</span>
-        <span>Peer Learning</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,4)"></label>
-      </div>
+      <img src="./images/MultiAgePeerMentoring.jpg" class="photo-img-real" id="pp4" />
       <div class="photo-caption"><input value="Multi-age peer mentoring in mathematics" /></div>
     </div>
     <div class="photo-card pc-5" id="pc5">
-      <div class="photo-placeholder" id="pp5">
-        <span style="font-size:2.5rem">🏫</span>
-        <span>Prepared Environment</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,5)"></label>
-      </div>
+      <img src="./images/PreparedEnvironment.jpg" class="photo-img-real" id="pp5" />
       <div class="photo-caption"><input value="The prepared Montessori classroom environment" /></div>
     </div>
     <div class="photo-card pc-6" id="pc6">
-      <div class="photo-placeholder" id="pp6">
-        <span style="font-size:2.5rem">📐</span>
-        <span>Geometry Materials</span>
-      </div>
-      <div class="photo-upload-overlay">
-        <label class="upload-label">📁 Upload Photo<input type="file" accept="image/*" onchange="uploadPhoto(this,6)"></label>
-      </div>
+      <img src="./images/GeometryMaterials.jpg" class="photo-img-real" id="pp6" />
       <div class="photo-caption"><input value="Geometry cabinet — shape exploration" /></div>
     </div>
   </div>
