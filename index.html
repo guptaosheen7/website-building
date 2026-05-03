@@ -178,7 +178,8 @@ h1,h2,h3 { font-family: 'Fraunces', serif; }
 .critique-quote {
   background: var(--dark); color: white;
   border-radius: 16px; padding: 2.5rem;
-  display: flex; flex-direction: column; justify-content: space-between;
+  flex-direction: column; justify-content: space-between;
+  height: 43.75rem;
 }
 .critique-quote blockquote {
   font-family: 'Fraunces', serif; font-size: 1.3rem;
@@ -261,7 +262,7 @@ h1,h2,h3 { font-family: 'Fraunces', serif; }
 .photo-card:hover { transform: scale(1.03); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
 .photo-placeholder {
   aspect-ratio: 4/3;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+   flex-direction: column; align-items: center; justify-content: center;
   gap: 0.5rem; font-size: 2rem; font-weight: 700;
   color: white; position: relative;
   background: linear-gradient(135deg, var(--teal), var(--blue));
@@ -303,21 +304,22 @@ h1,h2,h3 { font-family: 'Fraunces', serif; }
 .ref-box { background: white; border-radius: 12px; padding: 1.75rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
 .ref-box h3 { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 1rem; }
 .ref-textarea {
-  width: 100%; min-height: 200px; border: 1px solid var(--border);
+  width: 100%; border: 1px solid var(--border);
   border-radius: 8px; padding: 1rem; font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem; line-height: 1.75; color: var(--dark);
-  resize: vertical; transition: border-color 0.2s;
+  transition: border-color 0.2s;
 }
 .ref-textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(43,191,170,0.1); }
+.ref-textarea p { margin: 0 0 0.85rem; }
 .ref-textarea::placeholder { color: #bbb; }
 
 /* ===== EDITABLE TEXT ===== */
-[contenteditable="true"] {
+[] {
   outline: none; border-radius: 4px; cursor: text;
   transition: background 0.15s;
 }
-[contenteditable="true"]:hover { background: rgba(43,191,170,0.06); }
-[contenteditable="true"]:focus { background: rgba(43,191,170,0.09); outline: 2px dashed var(--teal); outline-offset: 2px; }
+[]:hover { background: rgba(43,191,170,0.06); }
+[]:focus { background: rgba(43,191,170,0.09); outline: 2px dashed var(--teal); outline-offset: 2px; }
 .edit-hint {
   display: inline-flex; align-items: center; gap: 0.35rem;
   font-size: 0.72rem; color: var(--teal-dark); background: var(--teal-pale);
@@ -367,10 +369,10 @@ h1,h2,h3 { font-family: 'Fraunces', serif; }
 .reflection-card h3 { font-family: 'Fraunces', serif; font-size: 1.3rem; margin-bottom: 0.5rem; }
 .reflection-card .subtitle { font-size: 0.85rem; color: var(--mid); margin-bottom: 1.5rem; }
 .reflection-area {
-  width: 100%; min-height: 260px; padding: 1.25rem;
+  width: 100%; padding: 1.25rem;
   border: 2px dashed var(--border); border-radius: 10px;
   font-family: 'DM Sans', sans-serif; font-size: 0.93rem;
-  line-height: 1.85; color: var(--dark); resize: vertical;
+  line-height: 1.85; color: var(--dark);
   transition: border-color 0.2s; background: var(--cream);
 }
 .reflection-area:focus { outline: none; border-color: var(--teal); background: white; }
@@ -568,7 +570,7 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
       <span class="tag tag-yellow">Mathematics</span>
     </div>
     <h1>Montessori <em>Maths</em><br>for Preschoolers</h1>
-    <p class="hero-desc" contenteditable="true">Learn how Montessori's useful, tangible materials encourage self-directed learning and purposeful play to develop children's basic numeracy skills between the ages of three and five.</p>
+    <p class="hero-desc" >Learn how Montessori's useful, tangible materials encourage self-directed learning and purposeful play to develop children's basic numeracy skills between the ages of three and five.</p>
     <div class="hero-meta">
       <div class="meta-item"><div class="label">Program Model</div><div class="value">Montessori Approach</div></div>
       <div class="meta-item"><div class="label">Curriculum Area</div><div class="value">Mathematics</div></div>
@@ -593,27 +595,26 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="section">
   <span class="eyebrow">📋 Overview</span>
   <h2 class="section-heading">About the Montessori Approach</h2>
-  <p class="section-lead">The Montessori method, developed by Dr Maria Montessori in the early 1900s, centres children as capable, self-directed learners who construct understanding through hands-on engagement with specially designed materials.</p>
-  <span class="edit-hint">✏️ Click any paragraph to edit</span>
+  <p class="section-lead">Dr. Maria Montessori created the Montessori method in Rome in 1907. It sees children as competent, self-directed learners who develop their mathematical comprehension via practical experiences using specially made resources. The Montessori classroom is an organised setting that facilitates learning through aesthetically beautiful, easily accessible areas (Montessori Australia, n.d.).</p>
 
   <div class="about-grid">
     <div class="about-text">
-      <p contenteditable="true">In Montessori approach mathematics is natural and meaningful part of the children's development. Montessori philosophy consider children are born with mathematical mind and early mathematical understanding can emerge through hands on experience through intentional environment (Follari, 2015). The Montessori classroom is the structural environment that supports mathematical learning through the accessible, aesthetically pleasing spaces where children can independently select materials based on their interest developmental readiness (Montessori Australia, n.d.). Children learn mathematical concepts not through the worksheet or direct instruction but through concrete experiences, resources that promote abstract thinking.</p>
-      <p contenteditable="true">The materials and resources are purposeful, sequenced, self-correcting that helps children to discover mathematical concepts independently. As children explore the Montessori materials such as counting objects, number rods, beads chains and sorting activities which foster quantity, numbers, patterns, measurements and problem solving's. As children hold the control for making mistakes and amending it, that promotes self-resilience, confidence, logical thinking reasoning and persistence (Follari, 2015). In Montessori settings mathematics learning is done through movement and sensory exploration i.e by touching, manipulating, organising materials, sensory activity of recognizing numbers. As Montessori approach belief that children learn best during critical periods when they seek order, structure and purposeful play.</p>
-      <p contenteditable="true">Montessori mathematics aligns with the curriculum areas through real life and sensory activities. Daily activities like pouring, sorting and matching, sequencing, classification, comparison, spatial awareness and problem solving. The role of the educator is a facilitator and observer rather than directing the children learning. Educator carefully prepared the environment and introduce the mathematical concepts through demonstration and follow up future learning by observing children's engagement (ACECQA, 2022).</p> 
+      <p >In Montessori approach mathematics is natural and meaningful part of the children's development. Montessori philosophy consider children are born with mathematical mind and early mathematical understanding can emerge through hands on experience through intentional environment (Follari, 2015). The Montessori classroom is the structural environment that supports mathematical learning through the accessible, aesthetically pleasing spaces where children can independently select materials based on their interest developmental readiness (Montessori Australia, n.d.). Children learn mathematical concepts not through the worksheet or direct instruction but through concrete experiences, resources that promote abstract thinking.</p>
+      <p >The materials and resources are purposeful, sequenced, self-correcting that helps children to discover mathematical concepts independently. As children explore the Montessori materials such as counting objects, number rods, beads chains and sorting activities which foster quantity, numbers, patterns, measurements and problem solving's. As children hold the control for making mistakes and amending it, that promotes self-resilience, confidence, logical thinking reasoning and persistence (Follari, 2015). In Montessori settings mathematics learning is done through movement and sensory exploration i.e by touching, manipulating, organising materials, sensory activity of recognizing numbers. As Montessori approach belief that children learn best during critical periods when they seek order, structure and purposeful play.</p>
+      <p >Montessori mathematics aligns with the curriculum areas through real life and sensory activities. Daily activities like pouring, sorting and matching, sequencing, classification, comparison, spatial awareness and problem solving. The role of the educator is a facilitator and observer rather than directing the children learning. Educator carefully prepared the environment and introduce the mathematical concepts through demonstration and follow up future learning by observing children's engagement (ACECQA, 2022).</p> 
     </div>
     <div class="about-sidebar">
       <div class="sidebar-card teal">
         <h4>🔢 Curriculum Area</h4>
-        <p contenteditable="true">Mathematics — focusing on numeracy, geometry, measurement and pattern recognition for preschool-aged children aged 3–5 years.</p>
+        <p >For preschool-aged children (ages three to five), mathematics focuses on numeracy, counting, number recognition, quantity, patterns, measurement, and early problem-solving. Number rods, sandpaper numerals, spindle boxes, and golden beads are examples of Montessori objects.</p>
       </div>
       <div class="sidebar-card orange">
         <h4>🌿 Program Model</h4>
-        <p contenteditable="true">The Montessori Approach — a child-centred, materials-based educational model originating from Dr Maria Montessori's work with young children in Rome (1907).</p>
+        <p >The Montessori Approach — a child-centred, materials-based educational model where children learn through purposeful activities. Educators act as facilitators and observers, carefully preparing the environment to meet children's developmental needs (Follari, 2019; Montessori Australia, n.d.).</p>
       </div>
       <div class="sidebar-card blue">
         <h4>📚 Key References</h4>
-        <p contenteditable="true">McLachlan, Fleer & Edwards (2018) · Follari (2019) · Lillard (2017) · EYLF (2009) · Montessori (1912)</p>
+        <p >Key References: McLachlan, Fleer & Edwards (2018); Follari (2019); Nolan & Raban (2024); MacDonald (2024); Montessori Australia (n.d.); EYLF (Australian Government, 2022).</p>
       </div>
     </div>
   </div>
@@ -627,33 +628,33 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="section">
   <span class="eyebrow">🧠 Theoretical Underpinnings</span>
   <h2 class="section-heading">Theoretical Foundations</h2>
-  <p class="section-lead">hello on several major theories of cognitive and social development. Understanding these frameworks helps explain why Montessori methods are developmentally appropriate for preschoolers.</p>
+  <p class="section-lead">A number of important theories of child development are incorporated into the Montessori method. The effectiveness of Montessori's concrete, hands-on arithmetic tools for preschool-aged children can be explained by Piaget's constructivism, Vygotsky's sociocultural theory, and Bruner's representation theory (Nolan & Raban, 2024).</p>
 
   <div class="two-col">
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-date">Lol</div>
-        <div class="tl-title">Cognitive Stages & Active Learning</div>
-        <div class="tl-body" contenteditable="true">Preschoolers are in the preoperational stage (2–7 years). Montessori materials align with Piaget's view that children construct knowledge through direct manipulation of the physical world. Number rods and sandpaper numbers allow children to internalise quantity before abstract symbolism.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">Vygotsky — Sociocultural Theory</div>
-        <div class="tl-title">Zone of Proximal Development & Peer Learning</div>
-        <div class="tl-body" contenteditable="true">Multi-age groupings (3–6 years) in Montessori classrooms reflect Vygotsky's Zone of Proximal Development. Older children scaffold younger peers' mathematical understanding — mathematical language and problem-solving emerge spontaneously through social interaction (Lillard, 2017).</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">Bronfenbrenner — Ecological Systems</div>
-        <div class="tl-title">The Prepared Environment as Microsystem</div>
-        <div class="tl-body" contenteditable="true">The Montessori classroom operates as a carefully designed microsystem. The prepared environment, with its ordered materials and uninterrupted work cycles, reflects Bronfenbrenner's view that immediate surroundings profoundly shape a child's learning and development.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-date">Montessori — Sensitive Periods</div>
+        <div class="tl-date">Montessori's Sensitive period</div>
         <div class="tl-title">Optimal Windows for Mathematical Learning</div>
-        <div class="tl-body" contenteditable="true">Montessori identified "sensitive periods" — windows of heightened receptivity to specific stimuli. For mathematics, the sensitive period for quantity and number occurs strongly during the preschool years (3–6), making this the ideal developmental window for introducing number rods and concrete numeracy materials.</div>
+        <div class="tl-body" >Montessori identified "sensitive periods" as windows of heightened receptivity to specific stimuli. For mathematics, the sensitive period for quantity and number occurs strongly during the preschool years (3-6 years). This makes this age the ideal developmental window for introducing number rods, sandpaper numerals, and concrete numeracy materials (Montessori Australia, n.d.; Nolan & Raban, 2024).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Piaget — Constructivism </div>
+        <div class="tl-title">Children Build Knowledge Through Action</div>
+        <div class="tl-body" >Piaget's constructivist theory argues that children actively construct knowledge through interacting with their environment, not passively receiving information. Preschoolers are in the preoperational stage (2-7 years) and need concrete, hands-on experiences. Montessori's self-correcting materials embody this by allowing children to discover mathematical relationships through their own actions (Nolan & Raban, 2024; MacDonald, 2024).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Vygotsky — Sociocultural Theory </div>
+        <div class="tl-title">Learning Through Social Interaction</div>
+        <div class="tl-body" >Vygotsky emphasised that children learn through social interaction within their Zone of Proximal Development (ZPD), tasks they can do with help before doing alone. Montessori's mixed-age classrooms (3-6 years) reflect this, as older children scaffold younger peers' mathematical understanding. Mathematical language emerges spontaneously through peer collaboration (Nolan & Raban, 2024).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Bruner's Representation Theory</div>
+        <div class="tl-title">Enactive, Iconic, Symbolic Stages</div>
+        <div class="tl-body" >Bruner proposed three stages of learning: Enactive (hands-on manipulation), Iconic (visual representation), and Symbolic (abstract symbols). Montessori mathematics directly follows this progression: children first handle number rods (enactive), then match quantities to number cards (iconic), then write numerals (symbolic). This aligns with the ELPSARA model (MacDonald, 2024).</div>
       </div>
     </div>
 
@@ -664,10 +665,11 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
           <span class="acc-icon">+</span>
         </div>
         <div class="acc-body">
-          <div class="acc-body-inner" contenteditable="true">
-            Outcome 4: Children are confident and involved learners — Montessori materials invite active exploration and problem-solving, directly reflecting this outcome. Children experience agency when choosing their work from the shelf and self-correcting errors independently.<br><br>
-            Outcome 5: Children are effective communicators — Mathematical language (more, less, equal, longer, shorter) emerges naturally in Montessori maths activities, particularly during peer collaboration and practical life tasks.<br><br>
-            Outcome 1: Children have a strong sense of identity — Self-directed work cycles build children's confidence and persistence, fostering a positive identity as capable mathematicians from an early age.
+          <div class="acc-body-inner" >
+            Outcome 1: Children have a strong sense of identity — Self-directed work cycles help children develop a positive identity as competent mathematicians from a young age by boosting their self-assurance and perseverance.<br><br>
+            Outcome 4: Children are confident and involved learners — Montessori products immediately reflect this result by encouraging active investigation and problem-solving. When they select their work from the shelf and fix mistakes on their own, children feel like they have agency.<br><br>
+            Outcome 5: Children are effective communicators — In Montessori arithmetic activities, mathematical terminology (more, less, equal, longer, shorter) spontaneously emerges, especially during peer collaboration and real-world tasks.<br><br>
+            
           </div>
         </div>
       </div>
@@ -677,7 +679,11 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
           <span class="acc-icon">+</span>
         </div>
         <div class="acc-body">
-          <div class="acc-body-inner" contenteditable="true">Add your NQS connections here. Consider Quality Area 1 (Educational Program and Practice) and Quality Area 3 (Physical Environment) as strong links to the Montessori prepared environment and intentional teaching through materials.</div>
+          <div class="acc-body-inner" >Quality Area 1 (Educational Programme and Practice): Montessori's personalised planning and observation-based evaluation meet NQS standards for child-centered, responsive programmes. Teachers record students' mathematical learning by methodical observation, and they organise subsequent activities according to each student's developmental preparedness. <br><br>
+
+            Quality Area 3 (Physical Environment): The Montessori-prepared environment is purposefully set up with easily available, self-correcting objects arranged from simple to complicated (number rods before sandpaper numerals, then golden beads). The surroundings take on the role of a "silent teacher" directing children' educational decisions. <br><br>
+
+According to Arthur et al. (2024), Nolan & Raban (2024), and Montessori Australia (n.d.), mixed-age groups (3–6 years) foster peer learning in which older children naturally scaffold children's mathematical understanding.</div>
         </div>
       </div>
       <div class="acc-item">
@@ -686,7 +692,7 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
           <span class="acc-icon">+</span>
         </div>
         <div class="acc-body">
-          <div class="acc-body-inner" contenteditable="true">Add your analysis of how the Montessori approach addresses or can be adapted for cultural diversity here. Consider how the universality of mathematical concepts can be embedded with culturally responsive materials and community connections.</div>
+          <div class="acc-body-inner" >Although Montessori was created in Italy, its ideas can be modified for culturally sensitive instruction in early childhood settings in Australia. By utilising Indigenous counting methods, employing natural materials for pattern detection, and including mathematical storytelling, educators can integrate Aboriginal and Torres Strait Islander viewpoints. By altering the materials, incorporating visual aids, and guaranteeing physical accessibility, the Montessori-prepared environment can be modified for children with a range of capacities. Inclusive education is naturally supported by self-correcting materials and individual pace (Montessori Australia, n.d.). should consider how cultural backgrounds affect one's ability to understand mathematics. All children's math curricula are enhanced when families share games, number stories, and counting systems from their cultures.</div>
         </div>
       </div>
     </div>
@@ -713,23 +719,23 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
       <div class="strategy-grid">
         <div class="strategy-card">
           <div class="icon">🎯</div>
-          <h4>Intentional Teaching</h4>
-          <p contenteditable="true">Educators present materials through three-period lessons (naming, recognition, recall), stepping back to allow self-directed exploration. Teaching is purposeful and responsive rather than prescriptive — the educator observes before intervening.</p>
+          <h4>Self-Directed Learning & Concrete to Abstract</h4>
+          <p >Montessori encourages self-directed learning and choice, building ownership and confidence. Children progress from concrete to abstract thinking through models such as ELPSARA: Experience (handling materials), Language (mathematical vocabulary), Pictorial Representation (drawing quantities), Symbolic Representation (written numerals), and Application (MacDonald, 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🧱</div>
-          <h4>Concrete to Abstract</h4>
-          <p contenteditable="true">Mathematical concepts are always introduced with concrete manipulatives first (physical objects), moving to pictorial representations, and finally abstract symbols. This C-P-A sequence is fundamental to Montessori maths pedagogy.</p>
+          <h4>Self-Correcting Materials & Repetition</h4>
+          <p >Self-correcting materials promote independent error analysis. Children are naturally drawn to concrete, manipulative resources that allow them to see and feel mathematical relationships. Immediate feedback creates a sense of discovery rather than correction. Children are encouraged to repeat tasks as they wish, strengthening neural pathways and building fluency (Montessori Australia, n.d.).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🔁</div>
-          <h4>Repetition & Mastery</h4>
-          <p contenteditable="true">Children are encouraged to repeat activities as many times as they choose. In Montessori philosophy, repetition is not redundancy — it reflects the child's drive toward mastery and is the mechanism through which deep understanding is constructed.</p>
+          <h4>Real-Life & Movement-Based Learning</h4>
+          <p >Montessori integrates real-life mathematical experiences (e.g., gardening, cooking, measuring) and recognises that young children learn through physical interaction. Walking along Number Rods, tracing sandpaper numbers, or physically moving objects for counting engages muscle memory and reinforces cognitive understanding (Arthur et al., 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🌍</div>
-          <h4>Practical Life Integration</h4>
-          <p contenteditable="true">Pouring, sorting, and measuring activities embed mathematical concepts (volume, estimation, categorisation) in authentic, meaningful contexts. Follari (2019) identifies Practical Life as central to Montessori's mathematics curriculum for young children.</p>
+          <h4>Peer Learning & Individualised Challenges</h4>
+          <p >Montessori promotes peer learning in mixed-age groups to enhance collaboration. Children observe, learn from, and support each other, strengthening communication and mathematical reasoning. Educators observe children to provide timely, individualised challenges regarding mathematical concepts within the curriculum (McLachlan et al., 2018).</p>
         </div>
       </div>
     </div>
@@ -738,22 +744,22 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <div class="strategy-card">
           <div class="icon">👁️</div>
           <h4>Systematic observation</h4>
-          <p contenteditable="true">Assessment in Montessori is primarily conducted through systematic, intentional, and ongoing observation. The educator's role is to be a "silent observer" and interpreter of children's learning, focusing on how the child selects and uses resources, whether they repeat activities with confidence, and their level of concentration and engagement (MacDonald, 2024; Nolan & Raban, 2024).</p>
+          <p >Assessment in Montessori is primarily conducted through systematic, intentional, and ongoing observation. The educator's role is to be a "silent observer" and interpreter of children's learning, focusing on how the child selects and uses resources, whether they repeat activities with confidence, and their level of concentration and engagement (MacDonald, 2024; Nolan & Raban, 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">📓</div>
           <h4>Anecdotal Records</h4>
-          <p contenteditable="true">Educators write brief, factual notes during or after observation describing what the child did, said, or demonstrated without judgment. They focus on accuracy in counting, matching, sequencing, grouping, problem-solving strategies, and independence (Arthur et al., 2024).</p>
+          <p >Educators write brief, factual notes during or after observation describing what the child did, said, or demonstrated without judgment. They focus on accuracy in counting, matching, sequencing, grouping, problem-solving strategies, and independence (Arthur et al., 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">✅</div>
           <h4>Developmental Tracking Sheets</h4>
-          <p contenteditable="true">Structured tracking linked to Montessori scope and sequence ensures learning is progressive while respecting individual pace. Tracking includes number recognition (0-10, 0-100, 0-1000), understanding of quantity and one-to-one correspondence, introduction to operations, and progress with mathematical resources (Montessori Australia, n.d.).</p>
+          <p >Structured tracking linked to Montessori scope and sequence ensures learning is progressive while respecting individual pace. Tracking includes number recognition (0-10, 0-100, 0-1000), understanding of quantity and one-to-one correspondence, introduction to operations, and progress with mathematical resources (Montessori Australia, n.d.).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">📸</div>
           <h4>Photo Documentation & Work Samples</h4>
-          <p contenteditable="true">Photographs of children working with materials (annotated with brief educator comments) and work samples such as number writing or completed matching tasks create powerful visual records that show process-based learning rather than only outcomes (Arthur et al., 2024).</p>
+          <p >Photographs of children working with materials (annotated with brief educator comments) and work samples such as number writing or completed matching tasks create powerful visual records that show process-based learning rather than only outcomes (Arthur et al., 2024).</p>
         </div>
       </div>
     </div>
@@ -762,22 +768,22 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <div class="strategy-card">
           <div class="icon">🔭</div>
           <h4>The Prepared Environment</h4>
-          <p contenteditable="true">The environment is properly, intentionally, and orderly organised so children can learn independently, choose activities freely, and be naturally guided toward learning without constant instruction. The environment itself becomes a "silent teacher" guiding learning choices (Nolan & Raban, 2024).</p>
+          <p >The environment is properly, intentionally, and orderly organised so children can learn independently, choose activities freely, and be naturally guided toward learning without constant instruction. The environment itself becomes a "silent teacher" guiding learning choices (Nolan & Raban, 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🗂️</div>
           <h4>Carefully selected materials</h4>
-          <p contenteditable="true">Montessori numeracy planning follows a clear developmental progression: Concrete stage (number rods, spindle boxes), Transitional stage (golden beads, bead chains, sandpaper numbers), and Abstract stage (written numerals and mental calculation readiness). Materials are self-correcting, allowing children to identify errors independently (Montessori Australia, n.d.).</p>
+          <p >Montessori numeracy planning follows a clear developmental progression: Concrete stage (number rods, spindle boxes), Transitional stage (golden beads, bead chains, sandpaper numbers), and Abstract stage (written numerals and mental calculation readiness). Materials are self-correcting, allowing children to identify errors independently (Montessori Australia, n.d.).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">📅</div>
           <h4>Sensitive Periods</h4>
-          <p contenteditable="true">When educators observe strong interest in numbers, counting, ordering, repetition of mathematical materials, or focused concentration, they plan to introduce richer numeracy materials, extend complexity (e.g., from counting to operations), and provide repetition opportunities for mastery (Nolan & Raban, 2024; Arthur et al., 2024).</p>
+          <p >When educators observe strong interest in numbers, counting, ordering, repetition of mathematical materials, or focused concentration, they plan to introduce richer numeracy materials, extend complexity (e.g., from counting to operations), and provide repetition opportunities for mastery (Nolan & Raban, 2024; Arthur et al., 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🌱</div>
           <h4>Freedom within Limits</h4>
-          <p contenteditable="true">Children are free to choose activities, repeat tasks, and work at their own pace within clear boundaries: respect for others, care for materials, and following classroom rules. This balance helps children develop independence, responsibility, and self-discipline (Nolan & Raban, 2024).</p>
+          <p >Children are free to choose activities, repeat tasks, and work at their own pace within clear boundaries: respect for others, care for materials, and following classroom rules. This balance helps children develop independence, responsibility, and self-discipline (Nolan & Raban, 2024).</p>
         </div>
       </div>
     </div>
@@ -786,22 +792,22 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <div class="strategy-card">
           <div class="icon">🪞</div>
           <h4>Reflection Based on Observation</h4>
-          <p contenteditable="true">Educators first reflect on what they observed during children's interaction with learning resources. Key questions include: What mathematical concept is the child demonstrating? Do they need repetition or are they ready for extension? Are they working independently? (Rouse, 2016; MacDonald, 2024).</p>
+          <p >Educators first reflect on what they observed during children's interaction with learning resources. Key questions include: What mathematical concept is the child demonstrating? Do they need repetition or are they ready for extension? Are they working independently? (Rouse, 2016; MacDonald, 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">👥</div>
           <h4>Reflecting on Material Effectiveness</h4>
-          <p contenteditable="true">Educators reflect on whether the material clearly supported understanding of the concept (e.g., place value with Golden Beads), whether there was confusion suggesting need for re-presentation, whether self-correction worked effectively, and whether the child was engaged and focused (Rouse, 2016).</p>
+          <p >Educators reflect on whether the material clearly supported understanding of the concept (e.g., place value with Golden Beads), whether there was confusion suggesting need for re-presentation, whether self-correction worked effectively, and whether the child was engaged and focused (Rouse, 2016).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">📈</div>
           <h4>Reflecting on Developmental Readiness (Piaget)</h4>
-          <p contenteditable="true">Montessori educators constantly reflect on whether a child is ready for a new mathematical concept, still consolidating earlier skills, or moving from concrete to abstract thinking. Linking to Piaget's preoperational stage (2-7 years), children think concretely and need physical materials to understand concepts before developing abstract thinking through repeated hands-on experiences (Nolan & Raban, 2024).</p>
+          <p >Montessori educators constantly reflect on whether a child is ready for a new mathematical concept, still consolidating earlier skills, or moving from concrete to abstract thinking. Linking to Piaget's preoperational stage (2-7 years), children think concretely and need physical materials to understand concepts before developing abstract thinking through repeated hands-on experiences (Nolan & Raban, 2024).</p>
         </div>
         <div class="strategy-card">
           <div class="icon">🔬</div>
           <h4>Reflecting on Teaching Practice</h4>
-          <p contenteditable="true">Educators reflect on their own practice, asking: Was my presentation clear and precise? Did I demonstrate the material slowly and correctly? They also engage in collaborative professional reflection, reviewing consistency in Montessori presentations across staff (Rouse, 2016).</p>
+          <p >Educators reflect on their own practice, asking: Was my presentation clear and precise? Did I demonstrate the material slowly and correctly? They also engage in collaborative professional reflection, reviewing consistency in Montessori presentations across staff (Rouse, 2016).</p>
         </div>
       </div>
     </div>
@@ -814,14 +820,15 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="section">
   <span class="eyebrow">🎮 Critique: Play</span>
   <h2 class="section-heading">Position on Play</h2>
-  <p class="section-lead">Analyse Montessori's stance on play and critique this position in relation to contemporary early childhood theory and the EYLF's play-based learning framework.</p>
+  <p class="section-lead">According to the Montessori method, play is viewed as meaningful work in which children actively develop their comprehension via intentional actions. In light of the EYLF's play-based learning framework, this section examines and evaluates Montessori's approach to play (Follari, 2019; Montessori Australia, n.d.).</p>
 
   <div class="critique-layout">
     <div class="critique-quote">
-      <blockquote contenteditable="true">"Play is the work of the child."</blockquote>
+      <blockquote >"Play is the work of the child."</blockquote>
       <div>
-        <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.75;" contenteditable="true">The stress at the core of criticising Montessori's stance on play is encapsulated in this frequently used remark. Although Montessori herself referred to children's self-directed activity as "work," current research contends that this activity is very consistent with characteristics of play, especially self-directed, intrinsically driven, and process-oriented involvement. </p>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.8rem;margin-top:1rem;" contenteditable="true">McLachlan, Fleer & Edwards (2018) · Lillard (2017)</p>
+                <img src="./images/Montessori-maths-child.jpg" alt="Montessori Maths Child" style="width:100%; height:auto; margin-bottom:1rem; border-radius:8px;" />
+        <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.75;" >The stress at the core of criticising Montessori's stance on play is encapsulated in this frequently used remark. Although Montessori herself referred to children's self-directed activity as "work," current research contends that this activity is very consistent with characteristics of play, especially self-directed, intrinsically driven, and process-oriented involvement. </p>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.8rem;" >McLachlan, Fleer & Edwards (2018)</p>
       </div>
     </div>
 
@@ -830,28 +837,28 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <div class="cp-icon t">🔍</div>
         <div>
           <h4>Montessori vs Free Play</h4>
-          <p contenteditable="true">Montessori does not emphasise dramatic or fantasy play, instead focusing on sensory and exploratory play where children develop independence, concentration, real life skills, logical thinking and discovery.</p>
+          <p >Montessori does not emphasise dramatic or fantasy play, instead focusing on sensory and exploratory play where children develop independence, concentration, real life skills, logical thinking and discovery.</p>
         </div>
       </div>
       <div class="critique-point">
         <div class="cp-icon o">🌿</div>
         <div>
           <h4>Intentional vs Child-Led</h4>
-          <p contenteditable="true">Montessori does not emphasise dramatic or fantasy play, instead focusing on sensory and exploratory play where children develop independence, concentration, real life skills, logical thinking and discovery.</p>
+          <p >Montessori does not emphasise dramatic or fantasy play, instead focusing on sensory and exploratory play where children develop independence, concentration, real life skills, logical thinking and discovery.</p>
         </div>
       </div>
       <div class="critique-point">
         <div class="cp-icon b">👥</div>
         <div>
           <h4>Social Play & Collaboration</h4>
-          <p contenteditable="true">Play is conducted in an intentionally prepared environment to meet children's holistic developmental needs. Montessori also has mixed-age classrooms where children support play through peer learning — younger children learn by observing older peers.</p>
+          <p >Play is conducted in an intentionally prepared environment to meet children's holistic developmental needs. Montessori also has mixed-age classrooms where children support play through peer learning. As a result, younger children learn by observing their older peers.</p>
         </div>
       </div>
       <div class="critique-point">
         <div class="cp-icon t">✏️</div>
         <div>
           <h4>Your Critical Analysis</h4>
-          <p contenteditable="true">Montessori educators focus on real life experience and practical play to help children engage in purposeful work. This aligns with EYLF Outcome 4 where children become confident and involved learners through self-directed exploration.</p>
+          <p >Montessori educators focus on real life experience and practical play to help children engage in purposeful work. This aligns with EYLF Outcome 4 where children become confident and involved learners through self-directed exploration.</p>
         </div>
       </div>
     </div>
@@ -864,7 +871,7 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="section">
   <span class="eyebrow">🎬 Multimedia Resources</span>
   <h2 class="section-heading">Videos & Media</h2>
-  <p class="section-lead">Add YouTube videos that support your analysis. Paste a YouTube URL below each player and click Load to embed it.</p>
+  <p class="section-lead"></p>
 
   <div class="video-grid">
     <div class="video-card">
@@ -872,8 +879,8 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <iframe src="https://www.youtube.com/embed/NlnHVxJKEiM?start=6" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
       <div class="video-meta">
-        <h4 contenteditable="true">Montessori Sensorial exercises</h4>
-        <p contenteditable="true">This video demonstrates how the Montessori Sensorial Exercises help children develop their ability to pay close attention, classify what they see, and focus. We believe that young scientists are born in the Sensorial area of a well-run Montessori school.</p>
+        <h4 >Montessori Sensorial exercises</h4>
+        <p >This video demonstrates how the Montessori Sensorial Exercises help children develop their ability to pay close attention, classify what they see, and focus. We believe that young scientists are born in the Sensorial area of a well-run Montessori school.</p>
       </div>
     </div>
 
@@ -882,8 +889,8 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
         <iframe src="https://www.youtube.com/embed/wKSRCeyR5Ck?start=20" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
       <div class="video-meta">
-        <h4 contenteditable="true">Practical Life & Mathematical Thinking</h4>
-        <p contenteditable="true">Montessori children easily grasp these and other advanced math concepts, whereas many regularly taught second and third graders find it difficult to add three or four-digit numbers. Watch this video to learn the clever series of exercises that help 6-year-olds do math operations into the thousands and set them up to become proficient in long multiplication into the millions by early elementary school.</p>
+        <h4 >Practical Life & Mathematical Thinking</h4>
+        <p >Montessori children easily grasp these and other advanced math concepts, whereas many regularly taught second and third graders find it difficult to add three or four-digit numbers. Watch this video to learn the clever series of exercises that help 6-year-olds do math operations into the thousands and set them up to become proficient in long multiplication into the millions by early elementary school.</p>
       </div>
     </div>
   </div>
@@ -895,8 +902,8 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="section">
   <span class="eyebrow">📸 Photo Gallery</span>
   <h2 class="section-heading">Classroom Photos & Resources</h2>
-  <p class="section-lead">Click any photo card to upload your own image. Add captions to contextualise each photo within your analysis.</p>
-  <span class="edit-hint">✏️ Click a card to upload your own photo · Click the caption to edit it</span>
+  <p class="section-lead"></p>
+  <span class="edit-hint"></span>
 
   <div class="photos-grid">
     <div class="photo-card pc-1" id="pc1">
@@ -931,7 +938,7 @@ footer strong { color: rgba(255,255,255,0.8); font-family: 'Fraunces', serif; }
 <div class="banner">
   <div class="banner-inner">
     <h2>Helpful Resources</h2>
-    <p contenteditable="true">NQS - Quality Area 1 (Educational program and practice)<br>
+    <p >NQS - Quality Area 1 (Educational program and practice)<br>
       McLachlan, Fleer & Edwards (2018) - Chapter 9 (Maths numeracy)<br>
       Follari (2019) - Chapters 2, 8, 9 (Theory & program models)<br>
 Freeman, Dalli & Pickering (2016) - Montessori research<br>
@@ -950,45 +957,40 @@ ACECQA National Quality Framework resources
     <div class="ref-grid">
       <div class="ref-box">
         <h3>📚 Reference List</h3>
-        <textarea class="ref-textarea" id="refTextarea" placeholder="Australian Curriculum, Assessment and Reporting Authority. (2016). Australian Curriculum. https://www.acara.edu.au/curriculum
-
-Australian Government Department of Education. (2009). Belonging, being & becoming: The Early Years Learning Framework for Australia.
-
-Epstein, A. S., & Hohmann, M. (2012). HighScope's curriculum content areas and the KDs. Extensions: Curriculum Newsletter from HighScope, 26(4), 1-15.
-
-Fleer, A., & Raban, B. (n.d.). Early childhood literacy and numeracy: Building good practice. Australian Government. https://www.dss.gov.au/sites/default/files/documents/05_2015/ed13-0077_ec_literacy_and_numeracy_building_good_practice_resources_booklet_acc.pdf
-
-Follari, L. (2019). Foundations and best practices in early childhood education (4th ed.). Pearson.
-
-Freeman, S., Dalli, C., & Pickering, A. (2016). Montessori early childhood education in New Zealand: Re-discovering the spirit of reflection and inquiry through recent policy changes. Australasian Journal of Early Childhood, 41(2), 69-76.
-
-Gobby, B., & Walker, R. (Eds.). (2022). Powers of curriculum: Sociological aspects of education (2nd ed.). Oxford University Press.
-
-McLachlan, C., Fleer, M., & Edwards, S. (2018). Early childhood curriculum: Planning, assessment and implementation (3rd ed.). Cambridge University Press.
-
-Montessori Australia. (n.d.). Montessori early years programme. https://montessori.org.au/
-
-Montessori, I.A. (2020). racks with work in a montessori class. [online] iStock. Available at: https://www.istockphoto.com/photo/racks-with-work-in-a-montessori-class-gm1198737643-342705729?searchscope=image%2Cfilm [Accessed 2 May 2026].
-
-National Association for the Education of Young Children. (n.d.). Developmentally appropriate practice (DAP). https://www.naeyc.org/resources/topics/dap
-
-Table, C. (2022). Montessori Preschool kindergarten classroom table. [online] iStock. Available at: https://www.istockphoto.com/photo/montessori-preschool-kindergarten-classroom-table-gm1405729160-457534995?searchscope=image%2Cfilm [Accessed 2 May 2026]."></textarea>
+        <div class="ref-textarea" id="refTextarea" contenteditable="true">
+          <p>1. Arthur, L., Beecher, B., Death, E., Dockett, S., & Farmer, S. (2024). Programming and planning in early childhood settings. Cengage Learning Australia.</p>
+          <p>2. Australian Children's Education and Care Quality Authority. (2022). National Quality Standard. ACECQA.</p>
+          <p>3. Australian Curriculum, Assessment and Reporting Authority. (2016). Australian Curriculum Foundation Year mathematics. https://www.acara.edu.au/curriculum</p>
+          <p>4. Australian Government Department of Education. (2022). Belonging, Being and Becoming: The Early Years Learning Framework for Australia (V2.0). Australian Government Department of Education for the Ministerial Council.</p>
+          <p>5. Fleer, A., & Raban, B. (n.d.). Early childhood literacy and numeracy: Building good practice. Australian Government. https://www.dss.gov.au/sites/default/files/documents/05_2015/ed13-0077_ec_literacy_and_numeracy_building_good_practice_resources_booklet_acc.pdf</p>
+          <p>6. Follari, L. (2019). Foundations and best practices in early childhood education: History, theories, and approaches to learning (4th ed.). Pearson.</p>
+          <p>7. Freeman, S., Dalli, C., & Pickering, A. (2016). Montessori early childhood education in New Zealand: Re-discovering the spirit of reflection and inquiry through recent policy changes. Australasian Journal of Early Childhood, 41(2), 69-76.</p>
+          <p>8. Gobby, B., & Walker, R. (Eds.). (2022). Powers of curriculum: Sociological aspects of education (2nd ed.). Oxford University Press.</p>
+          <p>9. Knaus, M. (2017). Supporting early mathematics learning in early childhood settings. Australasian Journal of Early Childhood, 42(3), 4-13. https://doi.org/10.23965/AJEC.42.3.01</p>
+          <p>10. Knaus, M. (2023). Maths is all around you: Developing mathematical concepts in the early years. Essential Resources Educational Publishers Ltd.</p>
+          <p>11. MacDonald, A. (2024). Mathematics in early childhood. Oxford University Press Australia & New Zealand.</p>
+          <p>12. McLachlan, C., Fleer, M., & Edwards, S. (2018). Early childhood curriculum: Planning, assessment and implementation (3rd ed.). Cambridge University Press.</p>
+          <p>13. Montessori Academy. (n.d.). Material spotlight: Montessori sandpaper numbers. https://montessoriacademy.com.au/material-spotlight-sandpaper-numbers/</p>
+          <p>14. Montessori Australia. (n.d.). Montessori early years programme. https://montessori.org.au/</p>
+          <p>15. National Association for the Education of Young Children. (n.d.). Developmentally appropriate practice (DAP). https://www.naeyc.org/resources/topics/dap</p>
+          <p>16. Nolan, A., & Raban, B. (2024). Theories into practice - revised edition: Understanding and rethinking our work with young children and the EYLF. Essential Resources Educational Publishers Ltd.</p>
+          <p>17. Rouse, L. (2016). Reflective practice: A handbook for early childhood educators. Essential Resources Educational Publishers Ltd.</p>
+        </div>
         <div class="word-counter" id="refCount"></div>
       </div>
 
       <div class="reflection-card">
         <h3>🪞 Personal Reflection</h3>
-        <p class="subtitle">Your critical reflection on the Montessori approach — what you have learned, how it challenges or affirms your beliefs about play and mathematics, and how it will influence your practice.</p>
-        <textarea class="reflection-area" id="reflectionArea" placeholder="I now have a better knowledge of how Montessori helps preschoolers with mathematics thanks to this assessment. As objects like number rods and sandpaper numerals move from tangible to abstract, I now view the prepared surroundings as a silent teacher (Nolan & Raban, 2024).
+        <p class="subtitle"></p>
+        <div class="reflection-area" id="reflectionArea" >I now have a better knowledge of how Montessori helps preschoolers with mathematics thanks to this assessment. As objects like number rods and sandpaper numerals move from tangible to abstract, I now view the prepared surroundings as a silent teacher (Nolan & Raban, 2024).
 
 Piaget's hypothesis, which states that infants in the preoperational stage require tangible elements to build mathematical comprehension before transitioning to abstract symbols, is directly supported by Montessori's method. This disproved my belief that worksheets are beneficial for young children.
 
-I assess Montessori's stance on play critically. Although Freeman et al. (2016) discovered significant mathematical results, I think social involvement in dramatic play—like pretend shop—also fosters counting and adding skills. I'll employ Rouse's (2016) reflective cycle, individual learning paths, and observation-based assessment in my future work. Within the EYLF paradigm, Montessori provides a solid, empirically supported basis for early mathematics.
+I assess Montessori's stance on play critically. Although Freeman et al. (2016) discovered significant mathematical results, I think social involvement in dramatic play (like pretend shop) also fosters counting and adding skills. I'll employ Rouse's (2016) reflective cycle, individual learning paths, and observation-based assessment in my future work. Within the EYLF paradigm, Montessori provides a solid, empirically supported basis for early mathematics.
 
 
-"></textarea>
-        <div class="word-counter" id="wordCount">0 words</div>
-        <button class="save-btn" onclick="saveReflection()">💾 Save to Browser</button>
+</div>
+        <div class="word-counter" id="wordCount"></div>
       </div>
     </div>
   </div>
@@ -998,14 +1000,9 @@ I assess Montessori's stance on play critically. Although Freeman et al. (2016) 
 <footer>
   <strong>Montessori Maths for Preschoolers</strong><br>
   ECE Assessment Website · Due 3rd May 2026 · Weighting 30% · Learning Outcomes 1, 2 & 3<br><br>
-  References: McLachlan, Fleer & Edwards (2018) · Follari (2019) · Lillard (2017) · EYLF (2009) · Montessori (1912)
+  Authors: Osheen Gupta, Bipina Shrees, Anjita Dotel<br>
 </footer>
 
-<!-- FLOATING ACTIONS -->
-<div class="submit-bar">
-  <button class="fab fab-secondary" onclick="window.print()">🖨️ Print / Export PDF</button>
-  <button class="fab fab-primary" onclick="openSubmit()">📤 Save & Submit</button>
-</div>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="submitModal">
@@ -1100,25 +1097,25 @@ function uploadPhoto(input, n) {
 const reflArea = document.getElementById('reflectionArea');
 const refArea = document.getElementById('refTextarea');
 function updateWordCount() {
-  const words = reflArea.value.trim() ? reflArea.value.trim().split(/\s+/).length : 0;
+  const words = reflArea.innerText.trim() ? reflArea.innerText.trim().split(/\s+/).length : 0;
   document.getElementById('wordCount').textContent = words + ' words';
 }
 function updateRefCount() {
-  document.getElementById('refCount').textContent = refArea.value.length + ' characters';
+  document.getElementById('refCount').textContent = refArea.innerText.length + ' characters';
 }
 reflArea.addEventListener('input', () => { updateWordCount(); saveAll(); });
 refArea.addEventListener('input', () => { updateRefCount(); saveAll(); });
 
 // ===== LOCAL STORAGE =====
 function saveAll() {
-  localStorage.setItem('montessori_reflection', reflArea.value);
-  localStorage.setItem('montessori_references', refArea.value);
+  localStorage.setItem('montessori_reflection', reflArea.innerText);
+  localStorage.setItem('montessori_references', refArea.innerText);
 }
 function loadSaved() {
   const r = localStorage.getItem('montessori_reflection');
   const ref = localStorage.getItem('montessori_references');
-  if (r) { reflArea.value = r; updateWordCount(); }
-  if (ref) { refArea.value = ref; updateRefCount(); }
+  if (r) { reflArea.innerText = r; updateWordCount(); }
+  if (ref) { refArea.innerText = ref; updateRefCount(); }
 }
 loadSaved();
 
